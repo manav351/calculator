@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class='row'>
+            <label id="history">0</label>
+        </div>
+        <div class="row">
+            <input id='inputField' type="text" style="width: 100%;"
+                readonly='readonly'>
+        </div>
+        <div class="row" style="margin-top: 1rem;">
+            <button class="cell" onclick="inputFunction('clearall')">C</button>
+            <button class="cell"
+                onclick="inputFunction('backspace')">CE</button>
+            <button class="cell" onclick="operators('%')">%</button>
+            <button class="cell" onclick="operators('/')" style="font-size: 1.4rem;">&#247</button>
+        </div>
+        <div class="row">
+            <button id="seven" class="cell"
+                onclick="inputFunction(7)">7</button>
+            <button id="eight" class="cell"
+                onclick="inputFunction(8)">8</button>
+            <button id="nine" class="cell" onclick="inputFunction(9)">9</button>
+            <button id="multi" class="cell" onclick="operators('*')" style="font-size: 1.4rem;">&times</button>
+        </div>
+        <div class="row">
+            <button id="four" class="cell" onclick="inputFunction(4)">4</button>
+            <button id="five" class="cell" onclick="inputFunction(5)">5</button>
+            <button id="six" class="cell" onclick="inputFunction(6)">6</button>
+            <button id="minus" class="cell" onclick="operators('-')" style="font-size: 1.4rem;">-</button>
+        </div>
+        <div class="row">
+            <button id="one" class="cell" onclick="inputFunction(1)">1</button>
+            <button id="two" class="cell" onclick="inputFunction(2)">2</button>
+            <button id="three" class="cell"
+                onclick="inputFunction(3)">3</button>
+            <button id="add" class="cell" onclick="operators('+')" style="font-size: 1.4rem;">+</button>
+        </div>
+        <div class="row">
+            <button class="cell"
+                style="background-color: transparent;"></button>
+            <button id="zero" class="cell" onclick="inputFunction(0)">0</button>
+            <button class="cell"
+                style="background-color: transparent;"></button>
+            <button id="equal" class="cell" onclick="operators('=')" style="font-size: 1.4rem;">=</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+body{
+    background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+    min-height: 97.1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainContainer{
+    background-color: rgba(255, 255, 255, 0.2);
+    /* display: flex; */
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: 5%;
+}
+.mainContainer input{
+    background-color: rgba(256,256,256,0.4);
+    box-sizing: border-box;
+    border-radius: 2rem;
+    padding-right: 1.6rem;
+    border: none;
+    height: 3rem;
+    text-align: right;
+    font-size: 1.2rem;
+}
+.mainContainer label{
+    text-align: right;
+    width: 100%;
+    padding: 0rem 1.6rem 0.4rem 0rem;
+    max-width: 16rem;
+}
+.row{
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+button.cell{
+    margin: 0.5rem;
+    /* padding: 15px; */
+    border:none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+button.cell:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.mainContainer input:focus, .cell{
+    /* border:none; */
+    outline: none;
+}
