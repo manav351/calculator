@@ -29,7 +29,7 @@ function inputFunction(value) {
             inputF.value = currValue.substr(0, currValue.length - 1);
 
         if (ansFlag == 1)
-            firstValue = parseInt(inputF.value, 10);
+            firstValue = parseFloat(inputF.value, 10);
     }
     else if (value == 0 && currValue == "0")
         5 + 5;
@@ -41,7 +41,7 @@ function inputFunction(value) {
 
 function operators(value) {
     if (firstValue == undefined) {
-        firstValue = parseInt(inputF.value, 10);
+        firstValue = parseFloat(inputF.value, 10);
         inputF.value = '0';
         operator = value;
         myLabel.innerHTML = '' + firstValue + ' ' + operator;
@@ -50,7 +50,7 @@ function operators(value) {
     }
     else if (value == '=') {
         if (secondValue == undefined){
-            secondValue = parseInt(inputF.value, 10);
+            secondValue = parseFloat(inputF.value, 10);
             myLabel.innerHTML = myLabel.innerHTML + ' ' + secondValue;
         }
         else{
@@ -64,7 +64,7 @@ function operators(value) {
     else {
         // if(secondValue == undefined) 
         if (ansFlag == 0) {
-            secondValue = parseInt(inputF.value, 10);
+            secondValue = parseFloat(inputF.value, 10);
             myLabel.innerHTML = myLabel.innerHTML + ' ' + secondValue + ' ' + value;
             calculate();
         }
@@ -108,6 +108,8 @@ document.onkeyup = function (e) {
         operators('/');
     else if (value == 53)
         operators('%');
-    else if (value == 46 || value == 110)
+    else if (value == 46)
         inputFunction('clearall');
+    else if (value == 110 || value == 190)
+        inputFunction('.');
 };
