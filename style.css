@@ -3,9 +3,12 @@ body{
     background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
     min-height: 97.1vh;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    margin-top: 15vh;
 }
 .mainHeading{
     color: white;
@@ -31,7 +34,8 @@ body{
     text-align: right;
     width: 100%;
     padding: 0rem 1.6rem 0.4rem 0rem;
-    max-width: 16rem;
+    max-width: 15rem;
+    max-height: 9ch;
 }
 .row{
     display: flex;
@@ -55,4 +59,34 @@ button.cell:hover{
 .mainContainer input:focus, .cell{
     /* border:none; */
     outline: none;
+}
+.instructions{
+    position: absolute;
+    top: 6.5vh;
+    right: -10em;
+    height: 26em;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: 25px;
+    width: 10em;
+}
+.instructions button.instructionHeading{
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    background-color: transparent;
+    width: 2ch;
+    top: 3em;
+    outline: none;  
+    border: none;
+    text-align: center;
+}
+.instructions .instructionsContent{
+    margin-left: 3ch;
+}
+
+@media only screen and (max-width: 700px) {
+    .instructions{
+        display: none;
+    }
 }

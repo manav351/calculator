@@ -113,3 +113,40 @@ document.onkeyup = function (e) {
     else if (value == 110 || value == 190)
         inputFunction('.');
 };
+
+let toggle = false;
+function toggleInstructions(){
+    let variable = document.getElementById("instructions");
+    let mainWindow = document.getElementById("mainContainer");
+    let mainHeading = document.getElementById("mainHeading");
+    if(toggle === false)
+    {
+        variable.setAttribute("style","right:0em;");
+        mainWindow.setAttribute("style","margin-right : 20em;");
+        mainHeading.setAttribute("style","margin-right : 20em;");
+        toggle = true;
+    }
+    else
+    {
+        mainWindow.setAttribute("style","margin-right : 0em;");
+        mainHeading.setAttribute("style","margin-right : 0em;");
+        variable.setAttribute("style","right:-10em;");
+        toggle = false;
+    }
+
+}
+
+document.getElementById('instructionsHeading').addEventListener('keypress', function(event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+    }
+});
+
+setInterval(function (){
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if(width < 700)
+    {
+        document.getElementById("mainContainer").setAttribute("style","margin-right : 0em;");
+        document.getElementById("mainHeading").setAttribute("style","margin-right : 0em;");
+    }
+},1000);

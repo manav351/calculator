@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <div class="mainHeading">
+    <div id="mainHeading" class="mainHeading">
         <h1>C A L C U L A T O R</h1>
     </div>
-    <div class="mainContainer">
+    <div id="mainContainer" class="mainContainer">
         <div class='row'>
             <label id="history">0</label>
         </div>
@@ -56,6 +56,21 @@
             <button id="zero" class="cell" onclick="inputFunction(0)">0</button>
             <button id="decimal" class="cell" onclick="inputFunction('.')" style="font-size: 1.4rem;">.</button>
             <button id="equal" class="cell" onclick="operators('=')" style="font-size: 1.4rem;">=</button>
+        </div>
+    </div>
+    <div id="instructions" class="instructions">
+        <button id="instructionsHeading" class="instructionHeading" onclick="toggleInstructions()">
+                I N S T R U C T I O N S
+        </button>
+        <div class="instructionsContent">
+            <p style="margin-left: 2ch;">Welcome to the Calculator</p>
+            <ul>
+                <li>This Calculator can use keys from keyboard to calculate</li>
+                <li>You can also view this in Mobile/ Desktop</li>
+                <li>This keyboard provides basic functionality of Calculator to evaluate Integers</li>
+                <li>Here % is used to Calculate Modulas</li>
+                <!-- <li>This is first</li> -->
+            </ul>
         </div>
     </div>
 </body>
